@@ -1,5 +1,16 @@
 
+ 
+ 
+ /* INDEX HTML PAGE INDEX HTML PAGE INDEX HTML PAGE */
  /* GENERAL STYLE */
+
+ *,
+ *::before,
+ *::after {
+         box-sizing: border-box;
+ }
+
+
 body {  
         font-family: Roboto, sans-serif;
         font-size: 16px;
@@ -9,13 +20,38 @@ body {
         letter-spacing: 0.32px;
 }
 
+p {
+
+}
+
+ul {
+        list-style-type: none
+}
+
+
 button {
         cursor: pointer;
 }
 
+
+.container {
+        width: 1158px;
+}
+
+
+.header-logo-nav {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+
+}
+
 /* WEBSITE LOGO */
 
-.logo { 
+.logo-web { 
         color: var(--IRIS, #4D5AE5);
         font-family: Raleway;
         font-size: 18px;
@@ -25,52 +61,59 @@ button {
         letter-spacing: 0.54px;
         text-transform: uppercase;
         text-decoration: none;
+
+        
 }
 
-.logo-dark {
+.logo-studio-header {
         color: var(--NAVY-BLUE, #2E2F42);
+        
+
 }
 
-.logo-white {
+.logo-studio-footer {
         color: var(--CLOUD, #F4F4FD);
 }
 
 /* HEADER STYLE */
-.header-nav { 
+.nav-header { 
+
         font-family: Roboto;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
-        line-height: 24px;
         letter-spacing: 0.32px;
         text-decoration: none;
 
         list-style-type: none;
-        margin: 0;
-        padding: 0;
+
 }
 
+/* unvisited link */
 .nav-link:link {
         text-decoration: none;
         
 }
 
+/* visited link */
 .nav-link:visited {
         text-decoration:underline;
-        background-color:none;
+        background-color: transparent
 }
 
+/* mouse over link */
 .nav-link:hover, .nav-link:focus  {
         text-decoration:underline;
-        background-color:none;
+        background-color:transparent;
 }
 
+/* selected link */
 .nav-link:active {
         text-decoration: overline;
-        background-color: none;
+        background-color: transparent;
 }
 
-.header-contacts {
+.contacts-header {
         font-family: Roboto;
         font-size: 16px;
         font-style: normal;
@@ -83,43 +126,54 @@ button {
         margin: 0;
         padding: 0;
         
+       
+
 }
+/* unvisited link */
     .contacts-link:link {
             text-decoration: none;
-
     }
 
+/* visited link */
     .contacts-link:visited {
             text-decoration:underline;
-            background-color: none;
+            background-color: transparent;
     }
 
-    .contacts-link:hover {
+/* mouse over link */
+    .contacts-link:hover, contacts-link:focus {
             text-decoration:underline;
-            background-color: none;
+            background-color: transparent;
     }
 
+/* selected link */
     .contacts-link:active {
             text-decoration:overline;
-            background-color: none;
+            background-color: transparent;
     }
 
 /* HERO BANNER */
 .hero {
         background: var(--NAVY-BLUE, #2E2F42);
-        flex-shrink: 0;
-        text-align: center;
         font-family: Roboto;
         color: var(--WHITE, #FFF);
+        text-align: center;
 }
 
-.hero-header { 
+.hero .hero-header  {
+        font-family: Roboto;
         font-size: 56px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px;
+        line-height: 60px; /* 107.143% */
         letter-spacing: 1.12px;
-} 
+        
+
+        width: 1440px;
+        height: 600px;
+        flex-shrink: 0;
+}
+
 
 .hero-btn {
         font-size: 16px;
@@ -127,16 +181,26 @@ button {
         font-weight: 500;
         line-height: 24px;
         letter-spacing: 0.64px;
-        border-radius: 4px;
-        background: var(--IRIS, #4D5AE5);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        
         color: var(--WHITE, #FFF);
         display: inline-flex;
         padding: 16px 32px;
         align-items: flex-start;
         gap: 10px;
-   
+
+
+        border-radius: 4px;
+        background: var(--IRIS, #4D5AE5);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        
 }
+
+
+.hero-btn:hover {
+        background-color: black;
+
+}
+
 /* CORE VALUES-SPDT, WHAT ARE WE DOING, OUR TEAM */
 
 h2 {
@@ -153,9 +217,18 @@ h2 {
 
 .core-values-spdt, .wawd-images, .our-team, .portfolio-img {
         list-style-type: none;
-        margin: 0;
-        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        
+        
 }
+
+.core-values-spdt {
+        
+}
+
 
 
 /* FOOTER STYLE */
