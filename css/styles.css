@@ -2,13 +2,23 @@
  
  
  /* INDEX HTML PAGE INDEX HTML PAGE INDEX HTML PAGE */
- /* GENERAL STYLE */
+ /* GLOBAL STYLE */
 
  *,
  *::before,
  *::after {
          box-sizing: border-box;
  }
+
+:root {
+        --iris: #4d5ae5;
+        --navyblue: #2e2f42;
+        --ocean: #404bbf;
+        --white: #fff;
+        --slate: #434455;
+        --cornflower: #e7e9fc;
+        --cloud: #f4f4fd;
+}
 
 
 body {  
@@ -20,13 +30,57 @@ body {
         letter-spacing: 0.32px;
 }
 
+
+.container {
+        width: 480px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        
+}
+
+.logo-web {
+        font-family: Raleway;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 21px; /* 116.667% */
+        letter-spacing: 0.54px;
+        color: var (--iris);
+}
+
+.logo-studio {
+        font-family: Raleway;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 21px; /* 116.667% */
+        letter-spacing: 0.54px;
+        color: var (--cloud); 
+}
+
+
+
+ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        border: 2px dashed #2a2a2a;
+}
+
+li {
+        display: inline;
+}
+
+
 p {
 
 }
 
-ul {
-        list-style-type: none
-}
+
 
 
 button {
@@ -39,41 +93,6 @@ button {
 }
 
 
-.header-logo-nav {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-evenly;
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-
-}
-
-/* WEBSITE LOGO */
-
-.logo-web { 
-        color: var(--IRIS, #4D5AE5);
-        font-family: Raleway;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 21px;
-        letter-spacing: 0.54px;
-        text-transform: uppercase;
-        text-decoration: none;
-
-        
-}
-
-.logo-studio-header {
-        color: var(--NAVY-BLUE, #2E2F42);
-        
-
-}
-
-.logo-studio-footer {
-        color: var(--CLOUD, #F4F4FD);
-}
 
 /* HEADER STYLE */
 .nav-header { 
@@ -126,6 +145,7 @@ button {
         margin: 0;
         padding: 0;
         
+        
        
 
 }
@@ -158,6 +178,7 @@ button {
         font-family: Roboto;
         color: var(--WHITE, #FFF);
         text-align: center;
+        margin: auto; 
 }
 
 .hero .hero-header  {
@@ -169,9 +190,7 @@ button {
         letter-spacing: 1.12px;
         
 
-        width: 1440px;
-        height: 600px;
-        flex-shrink: 0;
+        
 }
 
 
@@ -192,6 +211,8 @@ button {
         border-radius: 4px;
         background: var(--IRIS, #4D5AE5);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+
         
 }
 
@@ -220,13 +241,20 @@ h2 {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 8px;
+
+
+
+
 
         
         
 }
 
 .core-values-spdt {
-        
+        flex-direction: row;
+        gap: 8px;
+
 }
 
 
