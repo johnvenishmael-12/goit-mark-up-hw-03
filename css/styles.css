@@ -7,7 +7,10 @@
  *,
  *::before,
  *::after {
+         Margin: 0;
+         Padding: 0;
          box-sizing: border-box;
+
  }
 
 :root {
@@ -20,9 +23,8 @@
         --cloud: #f4f4fd;
 }
 
-
 body {  
-        font-family: Roboto, sans-serif;
+        font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Droid Sans, Helvetica Neue, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -30,24 +32,72 @@ body {
         letter-spacing: 0.32px;
 }
 
-
-.container {
-        width: 480px;
-        margin: 0 auto;
-        padding: 0 15px;
-
-        
+ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
 }
 
+li {
+        display: inline;
+}
+
+
+img { 
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+}
+
+button {
+        margin: 0;
+        padding: 0;
+        border: none;
+        cursor: pointer;    
+}
+
+.container {
+        max-width: 1158px;
+        width: 100%;
+        margin: 0 auto;
+}
+
+.section {
+        padding: 120px 0;
+}
+
+/* HEADER STYLE */
+
+.page-header {
+        border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
+        background: yellow;
+}
+
+/* .page-header {
+        display: flex;
+        gap: 40px;
+} */
+
+.page-nav .nav-link {
+        display: inline-flex;
+        align-items: space-between;    
+}
+
+.page-contacts {
+        display: flex;
+}
+
+/* logo */
 .logo-web {
         font-family: Raleway;
         text-transform: uppercase;
         font-size: 18px;
         font-style: normal;
         font-weight: 800;
-        line-height: 21px; /* 116.667% */
+        line-height: 21px;
         letter-spacing: 0.54px;
-        color: var (--iris);
+        text-decoration: none;
+        color: var(--iris);
 }
 
 .logo-studio {
@@ -56,74 +106,49 @@ body {
         font-size: 18px;
         font-style: normal;
         font-weight: 800;
-        line-height: 21px; /* 116.667% */
+
         letter-spacing: 0.54px;
-        color: var (--cloud); 
+        color: var(--slate);
+        text-decoration: none;
 }
 
-
-
-ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-
-        border: 2px dashed #2a2a2a;
+.logo-studio .page-footer {
+        color: var(--cloud);
+        background-color: var(--navyblue);
+}
+.footer {
+        color: var(--cloud);
+        background-color: var(--navyblue);
 }
 
-li {
-        display: inline;
-}
-
-
-p {
-
-}
-
-
-
-
-button {
-        cursor: pointer;
-}
-
-
-.container {
-        width: 1158px;
-}
-
-
-
-/* HEADER STYLE */
-.nav-header { 
-
+/* navigation */
+.page-nav {
         font-family: Roboto;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
         letter-spacing: 0.32px;
         text-decoration: none;
-
         list-style-type: none;
-
 }
 
 /* unvisited link */
 .nav-link:link {
         text-decoration: none;
-        
+
 }
 
 /* visited link */
 .nav-link:visited {
-        text-decoration:underline;
+        text-decoration: underline;
         background-color: transparent
 }
 
 /* mouse over link */
-.nav-link:hover, .nav-link:focus  {
-        text-decoration:underline;
-        background-color:transparent;
+.nav-link:hover,
+.nav-link:focus {
+        text-decoration: underline;
+        background-color: transparent;
 }
 
 /* selected link */
@@ -132,7 +157,8 @@ button {
         background-color: transparent;
 }
 
-.contacts-header {
+/* contacts */
+.page-contacts {
         font-family: Roboto;
         font-size: 16px;
         font-style: normal;
@@ -140,15 +166,9 @@ button {
         line-height: 24px;
         letter-spacing: 0.32px;
         text-decoration: none;
-
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        
-        
-       
-
+        color: var(--SLATE, #434455);
 }
+
 /* unvisited link */
     .contacts-link:link {
             text-decoration: none;
@@ -162,107 +182,118 @@ button {
 
 /* mouse over link */
     .contacts-link:hover, contacts-link:focus {
-            text-decoration:underline;
-            background-color: transparent;
+        background-color: transparent;
+        text-decoration:underline;
+            
     }
 
 /* selected link */
     .contacts-link:active {
-            text-decoration:overline;
-            background-color: transparent;
+        background-color: transparent;
+        text-decoration:overline;
+            
     }
+
 
 /* HERO BANNER */
 .hero {
         background: var(--NAVY-BLUE, #2E2F42);
+        padding: 188px 0; 
         font-family: Roboto;
         color: var(--WHITE, #FFF);
         text-align: center;
-        margin: auto; 
 }
 
-.hero .hero-header  {
-        font-family: Roboto;
+.hero h1  {
+        margin-bottom: 58px;
         font-size: 56px;
-        font-style: normal;
         font-weight: 700;
         line-height: 60px; /* 107.143% */
-        letter-spacing: 1.12px;
-        
-
-        
+        letter-spacing: 1.12px;           
 }
 
 
-.hero-btn {
+.cta {  
+        
+        background: var(--IRIS, #4D5AE5);
+        padding: 16px 32px;
         font-size: 16px;
-        font-style: normal;
         font-weight: 500;
+        color: var(--WHITE, #FFF);
         line-height: 24px;
         letter-spacing: 0.64px;
-        
-        color: var(--WHITE, #FFF);
-        display: inline-flex;
-        padding: 16px 32px;
-        align-items: flex-start;
-        gap: 10px;
-
-
+        border: 2px solid transparent;
         border-radius: 4px;
-        background: var(--IRIS, #4D5AE5);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-
-
-        
+        box-sizing: border-box;
 }
 
 
-.hero-btn:hover {
-        background-color: black;
-
+.cta:hover {
+        background: transparent;
+        border: 2px solid var(--IRIS, #4D5AE5);
+        box-sizing: border-box;
 }
 
 /* CORE VALUES-SPDT, WHAT ARE WE DOING, OUR TEAM */
 
 h2 {
+        margin-bottom: 72px;
+        font-size: 36px;
+        font-weight: 700;
         color: var(--NAVY-BLUE, #2E2F42);
         text-align: center;
-        font-family: Roboto;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 700;
+        text-transform: capitalize;
         line-height: 40px;
         letter-spacing: 0.72px;
-        text-transform: capitalize;
+        
 }
 
-.core-values-spdt, .wawd-images, .our-team, .portfolio-img {
-        list-style-type: none;
+.core-values h3 {
+        margin-bottom: 8px;
+}
+
+.core-values, 
+.what-we-do,
+.our-team { 
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
+        gap: 24px;
+}
 
+.our-team-wrap {
+        background: var(--CLOUD, #F4F4FD);
+}
 
-
-
-
-        
+.our-team li {
+        background: white;
         
 }
 
-.core-values-spdt {
-        flex-direction: row;
-        gap: 8px;
-
+.info {
+        padding: 32px 0;
+        text-align: center;    
 }
 
+.info h3 {
+        margin-bottom: 13px;
 
+}
 
 /* FOOTER STYLE */
-.footer {
-        background: var(--NAVY-BLUE, #2E2F42);
-        color: var(--CLOUD, #F4F4FD);
+.page-footer {
+        background-color: var(--navyblue);
+        padding: 100px 0;
+        color: white;
+}
+
+.page-footer .logo-web {
+        margin-bottom: 20px;
+}
+
+.page-footer p {
+        max-width: 265px; 
+        width: 100%;
 }
 
 
