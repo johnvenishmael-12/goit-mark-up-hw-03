@@ -97,7 +97,7 @@ button {
         font-weight: 800;
         letter-spacing: 0.54px;
         color: var(--slate);  
-        width: 1440px;
+        
 }
 
 .logo-studio-footer {
@@ -303,7 +303,6 @@ h2 {
         background-color: var(--navyblue);
         padding: 100px 0;
         color: white;   
-        margin-top: ;  
 }
 
 .page-footer .logo-web {
@@ -375,7 +374,6 @@ h2 {
         margin-top: 0;
         margin-bottom: 48px;
 }
-
 
 
 /*
