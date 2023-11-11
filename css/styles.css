@@ -1,16 +1,15 @@
 
  
  
- /* INDEX HTML PAGE INDEX HTML PAGE INDEX HTML PAGE */
+ /* INDEX HTML PAGE */
  /* GLOBAL STYLE */
 
  *,
  *::before,
  *::after {
-         Margin: 0;
-         Padding: 0;
+         margin: 0;
+         padding: 0;
          box-sizing: border-box;
-
  }
 
 :root {
@@ -20,7 +19,7 @@
         --white: #fff;
         --slate: #434455;
         --cornflower: #e7e9fc;
-        --cloud: #f4f4fd;
+        --cloud: #f4f4fd;     
 }
 
 body {  
@@ -30,18 +29,25 @@ body {
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0.32px;
+        margin: auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
 ul {
         padding: 0;
         margin: 0;
-        list-style-type: none;
 }
 
 li {
-        display: inline;
+        list-style-type: none;
+        padding: 0;
 }
-
 
 img { 
         display: block;
@@ -56,45 +62,20 @@ button {
         cursor: pointer;    
 }
 
+.links {
+        text-decoration: none;
+}
+
 .container {
         max-width: 1158px;
         width: 100%;
         margin: 0 auto;
+        padding: 0 15px;
 }
 
 .section {
         padding: 120px 0;
 }
-
-/* HEADER STYLE */
-
-.page-header {
-        display: flex;
-        background: var(--white, #fff);
-        border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
-}
-
-.page-logo {
-        display: flex;
-        justify-content: flex-start;
-        padding: 25.5px 0;   
-}
-
-.page-nav  {
-        display: flex;
-        justify-content:space-between;
-        padding: 25.5px 76px;
-        gap: 40px;
-}
-
-.page-contacts {
-        display: flex;
-        justify-content: flex-end;
-        padding: 25.5px 156px;
-        gap: 40px;
-        
-}
-
 
 /* logo */
 .logo-web {
@@ -105,7 +86,6 @@ button {
         font-weight: 800;
         line-height: 21px;
         letter-spacing: 0.54px;
-        text-decoration: none;
         color: var(--iris);
 }
 
@@ -115,19 +95,48 @@ button {
         font-size: 18px;
         font-style: normal;
         font-weight: 800;
-
         letter-spacing: 0.54px;
-        color: var(--slate);
-        text-decoration: none;
+        color: var(--slate);  
+        width: 1440px;
 }
 
-.logo-studio .page-footer {
+.logo-studio-footer {
         color: var(--cloud);
         background-color: var(--navyblue);
 }
-.footer {
-        color: var(--cloud);
-        background-color: var(--navyblue);
+
+/* HEADER STYLE */
+
+.page-header {
+        display: flex;
+        background: var(--white, #fff);
+        border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC); 
+}
+
+.d-flex {
+        display: flex;
+        padding-top: 25.5px;
+        padding-bottom: 25.5px;   
+}
+
+.page-logo {
+       margin-right: 77px;
+}
+
+.page-contacts {
+        padding-left: 292px;   
+        gap: 40px; 
+}
+
+.contacts-link {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+        color: var(--SLATE);
+        text-decoration: none;
+        
 }
 
 /* navigation */
@@ -138,6 +147,12 @@ button {
         letter-spacing: 0.32px;
         text-decoration: none;
         list-style-type: none;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 40px;
 }
 
 /* unvisited link */
@@ -148,68 +163,60 @@ button {
 
 /* visited link */
 .nav-link:visited {
-        text-decoration: underline;
+        text-decoration: none;
         background-color: transparent
 }
 
 /* mouse over link */
 .nav-link:hover,
 .nav-link:focus {
-        text-decoration: underline;
+        text-decoration: none;
         background-color: transparent;
+        color: var(--ocean);
 }
 
 /* selected link */
 .nav-link:active {
-        text-decoration: overline;
+        text-decoration: none;
         background-color: transparent;
+        color: var(--ocean);
 }
 
 /* contacts */
-.page-contacts {
-        font-family: Roboto;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0.32px;
-        color: var(--SLATE);
-        text-decoration: none;
-        list-style-type: none;
+/* unvisited link */ 
+.contacts-link:link { text-decoration: none;
 }
-
-/* unvisited link */
-.contacts-link:link {
-            text-decoration: none;
-    }
 
 /* visited link */
 .contacts-link:visited {
-            text-decoration:underline;
-            background-color: transparent;
-    }
+        text-decoration: none;
+        background-color: transparent;
+        color: var(--ocean);
+
+}
 
 /* mouse over link */
 .contacts-link:hover, .contacts-link:focus {
         background-color: transparent;
-        text-decoration:underline;
-            
-    }
+        text-decoration: none; 
+        color: var(--ocean);
+}
 
 /* selected link */
 .contacts-link:active {
         background-color: transparent;
-        text-decoration:overline;
-            
-    }
-
+        text-decoration: none; 
+        color: var(--ocean);
+}
 
 /* HERO BANNER */
 .hero {
         background: var(--NAVY-BLUE, #2E2F42);
         padding: 188px 0; 
         font-family: Roboto;
-        color: var(--WHITE, #FFF);
+        color: var(--white, #fff);
         text-align: center;
+        width: 1140px;
 }
 
 .hero h1  {
@@ -220,14 +227,13 @@ button {
         letter-spacing: 1.12px;           
 }
 
-
 .cta {  
         
-        background: var(--IRIS, #4D5AE5);
+        background: var(--iris, #4d5ae5);
         padding: 16px 32px;
         font-size: 16px;
         font-weight: 500;
-        color: var(--WHITE, #FFF);
+        color: var(--white, #fff);
         line-height: 24px;
         letter-spacing: 0.64px;
         border: 2px solid transparent;
@@ -236,14 +242,14 @@ button {
         box-sizing: border-box;
 }
 
-
-.cta:hover {
-        background: transparent;
-        border: 2px solid var(--IRIS, #4D5AE5);
+.cta:hover,  
+.cta:focus {
+        background-color: var(--ocean, #404bbf);
+        border: 2px solid var(--iris, #4d5ae5);
         box-sizing: border-box;
 }
 
-/* CORE VALUES-SPDT, WHAT ARE WE DOING, OUR TEAM */
+/* CORE VALUES-SPDT, WHAT WE DOING, OUR TEAM */
 
 h2 {
         margin-bottom: 72px;
@@ -290,9 +296,14 @@ h2 {
 
 /* FOOTER STYLE */
 .page-footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
         background-color: var(--navyblue);
         padding: 100px 0;
-        color: white;
+        color: white;   
+        margin-top: ;  
 }
 
 .page-footer .logo-web {
@@ -302,9 +313,75 @@ h2 {
 .page-footer p {
         max-width: 265px; 
         width: 100%;
+        margin-top: 8px;
+        
 }
 
 
-/* PORTFOLIO PAGE PORTFOLIO PAGE PORTFOLIO PAGE */
- 
+/* PORTFOLIO PAGE */
 
+.portfolio-menu {
+        display: flex;
+        padding-top: 96px;
+        padding-bottom: 72px;
+        justify-content: center;
+        gap: 12px; 
+} 
+
+.menu-button {
+        background: var(--cloud, #f4f4fd);
+        color: var(--iris, #4d5ae5);
+        font-weight: 500;
+        letter-spacing: 0.64px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: inherit;
+        border-radius: 4px;
+        border: 1px solid var(--cornflower, #e7e9fc);  
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+} 
+
+.menu-button:hover, 
+.menu-button:focus {
+        background: var(--ocean, #404bbf);
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+                        0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+        color: var(--white, #fff);
+        border-color: var(--ocean, #404bbf);
+}
+
+.active {
+        background: var(--ocean, #404bbf);
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+                0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+        color: var(--white, #fff);
+        border-color: var(--ocean, #404bbf);
+}
+
+.portfolio-img {
+        display: flex;
+        flex: wrap;
+        gap: 48px 24px;
+        justify-content: center;
+        align-items: center; 
+}
+
+.portfolio-description {
+        padding: 32px 16px;
+        border: 1px solid var(--cornflower, #e7e9fc);
+        border-top: none;
+        margin-top: 0;
+        margin-bottom: 48px;
+}
+
+
+
+/*
+@media screen and (min-width: 767px) {
+        body { 
+                background-color: red;
+        }
+}
+*/

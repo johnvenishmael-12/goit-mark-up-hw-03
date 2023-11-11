@@ -13,73 +13,65 @@
         <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
         <title>Web Studio HW3</title>
     </head>
-    <body>
-        <div class="container">
-            <header class="page-header"> 
-                        <!--logo-->
-                        <div class="page-logo">
-                            <a href="index.html" class="logo-web">Web<span class="logo-studio">Studio</span></a>
-                        </div>
-                        <!--navigation-->
-                        <div class="page-nav">
-                            <nav> 
-                                <ul> 
-                                    <li><a class="nav-link" href="index.html" rel="Home Page">Studio</a></li>
-                                    <li><a class="nav-link" href="portfolio.html" rel="Portfolio">Portfolio</a></li>
-                                    <li><a class="nav-link" href="#contact">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!--contacts-->
-                        <div class="page-contacts">
-                            <ul> 
-                                <li><a class="contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                                <li><a class="contacts-link" href="tel:+110001111111">+11 (000) 111 11 11</a></li>
-                            </ul> 
-                        </div>
-            </header>
-        </div>
+    <body>  
+        <header class="container page-header"> 
+                <div class="d-flex">
+                    <!--logo-->
+                        <a href="index.html" class="links logo-web page-logo">Web<span class="logo-studio">Studio</span></a>
+                    <!--navigation-->
+                    <nav> 
+                        <ul class="page-nav"> 
+                            <li><a class="links nav-link" href="index.html" rel="Home Page">Studio</a></li>
+                            <li><a class="links nav-link" href="portfolio.html" rel="Portfolio">Portfolio</a></li>
+                            <li><a class="links nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                    <!--contacts-->
+                    <ul class="d-flex page-contacts">
+                        <li><a class="links contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                        <li><a class="links contacts-link" href="tel:+110001111111">+11 (000) 111 11 11</a></li>
+                    </ul>
+                </div>
+        </header>
         <main> 
             <!--hero banner section -->
-            <Section class="hero">
+            <Section class="container section hero">
                 <h1>Effective Solutions<br>for Your Business</h1>
                 <button class="cta" type="button">Order Service</button>
             </Section>
-            <div class="container">
-                <!--core values section-->
-                <Section class="section"> 
-                    <ul class="core-values">
-                        <li>
-                            <h3>Strategy</h3>
-                            <p>Our goal is to identify the business problem to walk away with the perfect and creative solution.</p>
-                        </li>
-                        <li>
-                            <h3>Punctuality</h3>
-                            <p>Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
-                        </li>   
-                        <li>
-                            <h3>Diligence</h3>
-                            <p>Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
-                        </li>
-                        <li>
-                            <h3>Technologies</h3>
-                            <p>Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
-                        </li>
+            <!--core values section-->
+            <Section class="container section"> 
+                <ul class="core-values">
+                    <li>
+                        <h3>Strategy</h3>
+                        <p>Our goal is to identify the business problem to walk away with the perfect and creative solution.</p>
+                    </li>
+                    <li>
+                        <h3>Punctuality</h3>
+                        <p>Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
+                    </li>   
+                    <li>
+                        <h3>Diligence</h3>
+                        <p>Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
+                    </li>
+                    <li>
+                        <h3>Technologies</h3>
+                        <p>Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
+                    </li></ul>
+            </Section>
+            <!-- what are we doing section -->
+            <Section class="container section"> 
+                    <h2>What Are We Doing</h2>
+                    <ul class="what-we-do">
+                        <li><img src="images/monitor.jpg" alt="monitor"></li>
+                        <li><img src="images/cp.jpg" alt="cellphones"></li>
+                        <li> <img src="images/gadgets.jpg" alt="gadgets"></li>
                     </ul>
-                </Section>
-                <!-- what are we doing section -->
-                <Section class="section"> 
-                        <h2>What Are We Doing</h2>
-                        <ul class="what-we-do">
-                            <li><img src="images/monitor.jpg" alt="monitor"></li>
-                            <li><img src="images/cp.jpg" alt="cellphones"></li>
-                            <li> <img src="images/gadgets.jpg" alt="gadgets"></li>
-                        </ul>
-                </Section>
-            </div>
+            </Section>
             <!--our team section -->
-            <Section class="section our-team-wrap">
-                <div class="container">
+            <Section class="container section our-team-wrap">
+                <div>
                     <h2>Our Team</h2>
                     <ul class="our-team">
                         <li> 
@@ -115,11 +107,9 @@
             </Section>
         </main>
         <!--page footer-->
-        <footer class="page-footer"> 
-            <div class="container">
-                <a href="#" class="logo-web">Web<span class="logo-studio footer">Studio</span></a>
+        <footer class="container page-footer"> 
+                <a href="#" class="links logo-web">Web<span class="logo-studio-footer">Studio</span></a>
                 <p>Increase the flow of customers and sales for your business with digital marketing & growth solutions.</p>
-            </div>
         </footer>
     </body>
 </html>
